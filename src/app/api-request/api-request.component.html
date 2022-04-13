@@ -1,0 +1,81 @@
+<button type="button" (click)="news()">Get news</button>
+<!-- {{Agriota| json}} <br> -->
+<div class="row">
+  <h3 *ngIf="Agriota != undefined" class="col-12">Agriota</h3>
+  <ng-container *ngFor="let agriota of Agriota">
+    <div class="mt-3 col-3 newsContainer">
+      <div class="card">
+        <h5 class="card-header newsTitle">{{agriota.title}}</h5>
+        <div class="card-body">
+          <p class="desc">{{agriota.description}}</p>
+          <span class="badge bg-secondary">{{agriota.publishedDate}}</span>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+<div class="row">
+  <h3 *ngIf="CropData != undefined" class="col-12 primary-text">
+    <hr><br>CropData
+  </h3>
+  <ng-container *ngFor="let cropData of CropData">
+    <div class="mt-3 col-3 newsContainer">
+      <div class="card">
+        <h5 class="card-header newsTitle">{{cropData.title}}</h5>
+        <div class="card-body">
+          <p class="desc">{{cropData.description}}</p>
+          <span class="badge bg-secondary">{{cropData.publishedDate}}</span>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+<div class="row">
+  <h3 *ngIf="DrKrishi != undefined" class="col-12 primary-text">
+    <hr><br>DrKrishi
+  </h3>
+  <ng-container *ngFor="let drKrishi of DrKrishi">
+    <div class="mt-3 col-3 newsContainer">
+      <div class="card">
+        <h5 class="card-header newsTitle">{{drKrishi.title}}</h5>
+        <div class="card-body">
+          <p class="desc">{{drKrishi.description}}</p>
+          <span class="badge bg-secondary">{{drKrishi.publishedDate}}</span>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+<div class="row">
+  <h3 *ngIf="KrishiCo != undefined" class="col-12 primary-text">
+    <hr><br>KrishiCo
+  </h3>
+  <ng-container *ngFor="let krishiCo of KrishiCo">
+    <div class="mt-3 col-3 newsContainer">
+      <div class="card">
+        <h5 class="card-header newsTitle">{{krishiCo.title}}</h5>
+        <div class="card-body">
+          <p class="desc">{{krishiCo.description}}</p>
+          <span class="badge bg-secondary">{{krishiCo.publishedDate}}</span>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+<div class="row">
+  <h3 *ngIf="LatestNews != undefined" class="col-12 primary-text">
+    <hr><br>LatestNews
+  </h3>
+  <ng-container *ngFor="let latestNews of LatestNews">
+    <div class="mt-3 col-3 newsContainer">
+      <div class="card">
+        <div style="max-height: 150px; overflow: hidden;"><img src={{latestNews.imageUrl}} class="img-fluid"></div>
+        <div class="card-body">
+          <h5 class="newsTitle">{{latestNews.title}}</h5>
+          <p class="desc">{{latestNews.description}}</p>
+          <span class="badge bg-secondary">{{latestNews.publishedDate}}</span>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

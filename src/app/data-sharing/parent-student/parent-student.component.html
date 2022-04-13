@@ -1,0 +1,7 @@
+<p>parent-student works!</p>
+<app-student [myInputMsg]="myInputmessage" (myOutPut)="GetChildData($event)"></app-student>
+<!-- <app-student [myInputMsg]="myInputmessage"></app-student> -->
+<!-- <p><strong>{{outputFromChild}}</strong></p> -->
+<div *ngFor="let item of outputFromChild; index as i">
+  <p>{{i}}, {{item.name}}, {{item.value}}</p>
+</div>

@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4">
+      <h3>Component to the DOM binding</h3>
+      <h5>Property binding</h5>
+      <p><img alt="Interpolated item" [src]="itemImageUrl" class="img-fluid">
+        <br><code>[src]="Value"</code>
+      <h5>Interpolation</h5>
+      <p><img alt="Interpolated item" src="{{itemImageUrl}}" class="img-fluid">
+        <br>is the <i>interpolated</i>
+    </div>
+    <div class="col-4">
+      <h3>From the DOM to the Component</h3>
+      <h5>Event binding: (event)=”function”:</h5>
+      <button class="btn btn-secondary mb-2" (click)="append()">Click Event</button>
+      <div *ngIf="displayBox">This is a container , depend on click event</div>
+    </div>
+    <div class="col-4">
+      <h3>Two-way binding</h3>
+      <input type="text" class="form-control" [(ngModel)]="inputValue">
+      <div class="p-2">{{inputValue}}</div>
+    </div>
+  </div>
+</div>
+<div><code>observable|async</code>: Time: {{ time | async }}</div>

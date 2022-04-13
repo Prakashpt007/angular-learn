@@ -1,0 +1,82 @@
+<!--reference link -->
+<!-- https://www.bezkoder.com/angular-13-form-validation/-->
+<!-- <form class="container mt-3" [formGroup]="form" (ngSubmit)="onSubmit()" style="max-width: 600px;box-shadow: 10px 10px 10px 10px;padding: 24px;border-radius: 3px; margin-bottom: 30px;">
+  <div class="form-group mb-3">
+    <label class="form-label" for="fullName">Full Name</label>
+    <input type="text" class="form-control" id="fullName" formControlName="fullName" [ngClass]="{'is-invalid' : submitted && f['fullName'].errors }">
+    <div *ngIf="submitted && f['fullName'].errors" class="invalid-feedback">
+      <div *ngIf="f['fullName'].errors['required']">Full Name is required</div>
+    </div>
+  </div>
+  <div class="form-group mb-3">
+    <label class="form-label" for="userName">User Name</label>
+    <input type="text" class="form-control" id="userName" formControlName="userName" [ngClass]="{'is-invalid' : submitted && f['userName'].errors }">
+    <div *ngIf="submitted && f['userName'].errors" class="invalid-feedback">
+      <div *ngIf="f['userName'].errors['required']">User Name is required</div>
+    </div>
+  </div>
+  <div class="form-group mb-3">
+    <label class="form-label" for="email">Email</label>
+    <input type="email" class="form-control" id="email" formControlName="email" [ngClass]="{'is-invalid' : submitted && f['email'].errors }">
+    <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+      <div *ngIf="f['email'].errors['required']">Email is required</div>
+      <div *ngIf="f['email'].errors['email']">Email is invalid</div>
+    </div>
+  </div>
+  <div class="form-group mb-3">
+    <label class="form-label" for="password">Password</label>
+    <input type="password" class="form-control" id="password" formControlName="password" [ngClass]="{'is-invalid': submitted && f['password'].errors}">
+    <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+      <div *ngIf="f['password'].errors['required']">Password is required</div>
+      <div *ngIf="f['password'].errors['minlength']">Password must be at least 6 characters</div>
+      <div *ngIf="f['password'].errors['maxlength']">Password must not exceed 40 characters</div>
+    </div>
+  </div>
+  <div class="form-group mb-3">
+    <label class="form-label" for="confirmPassword">Confirm Password</label>
+    <input type="text" class="form-control" id="confirmPassword" formControlName="confirmPassword" [ngClass]="{'is-invalid' : submitted && f['confirmPassword'].errors}">
+    <div *ngIf="submitted && f['confirmPassword'].errors" class="invalid-feedback">
+      <div *ngIf="f['confirmPassword'].errors['required']">Confirm Password is required</div>
+      <div *ngIf="f['confirmPassword'].errors['matching']">Confirm Password does not match</div>
+    </div>
+  </div>
+  <div class="form-check mb-3">
+    <input class="form-check-input" type="checkbox" value="" id="acceptTerms">
+    <label class="form-check-label" for="acceptTerms">Accept Terms</label>
+    <div *ngIf="submitted && f['acceptTerms'].errors" class="invalid-feedback"> Accept Terms is required </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary me-2 btn-sm">Submit</button>
+    <button type="button" (click)="onReset()" class="btn btn-primary btn-sm">Reset</button>
+  </div>
+</form>
+<hr> -->
+<form [formGroup]="userDetails" (ngSubmit)="submitUserDetails()">
+  <div class="form-group mb-2">
+    <label class="form-label" for="name">Name</label>
+    <input type="text" class="form-control" formControlName="userName" [ngClass]="{'is-invalid': userDetailSubmit && f['userName'].errors}" placeholder="Name">
+    <div *ngIf="userDetailSubmit && f['userName'].errors" class="invalid-feedback">
+      <div *ngIf="f['userName'].errors['required']">Please Enter Name</div>
+    </div>
+  </div>
+  <div class="form-group mb-2">
+    <label class="form-label" for="userEmail">Email</label>
+    <input type="email" class="form-control" formControlName="userEmail" [ngClass]="{'is-invalid': userDetailSubmit && f['userEmail'].errors}" placeholder="Email">
+    <div *ngIf="userDetailSubmit && f['userEmail'].errors" class="invalid-feedback">
+      <div *ngIf="f['userEmail'].errors['required']">Please Enter Email</div>
+      <div *ngIf="f['userEmail'].errors['email']">Please Enter Valid Email</div>
+    </div>
+  </div>
+  <div class="form-group mb-2">
+    <label class="form-label" for="userMobile">Mobile Number</label>
+    <input type="text" class="form-control" formControlName="userMobile" [ngClass]="{'is-invalid': userDetailSubmit && f['userMobile'].errors}" placeholder="Name">
+    <div *ngIf="userDetailSubmit && f['userMobile'].errors" class="invalid-feedback">
+      <div *ngIf="f['userMobile'].errors['required']">Please Enter Mobile No.</div>
+      <div *ngIf="f['userMobile'].errors['pattern']">Please Enter Valid Mobile No.</div>
+      <div *ngIf="f['userMobile'].errors['minlength']">Please Enter Valid 10 Digit Mobile No.</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <input type="submit" value="Submit" class="btn btn-primary">
+  </div>
+</form>

@@ -1,0 +1,10 @@
+<h2>Stress List</h2>
+<ng-container *ngIf="stressData">
+  <div class="row">
+    <div class="col-4 border py-3" *ngFor="let items of stressData">
+      <h4>{{items.Commodity}}</h4>
+      <p>{{items.Phenophase}}</p>
+      <p>{{items.Stress}}</p>
+    </div>
+  </div>
+</ng-container>

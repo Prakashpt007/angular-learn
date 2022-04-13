@@ -1,0 +1,33 @@
+<loader></loader>
+<div class="d-flex p-3 justify-content-between align-items-center">
+  <h1>Welcome to {{title}}</h1>
+  <app-dark-light-mode></app-dark-light-mode>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-2 col-xxl-2" style="max-width: 200px;">
+      <button class="btn btn-primary mb-2 w-100" routerLinkActive="active" routerLink="data-sharing">Data sharing</button><br>
+      <button class="btn btn-primary mb-2 w-100" routerLinkActive="active" routerLink="forms">Form Validation</button><br>
+      <button class="btn btn-primary mb-2 w-100" routerLinkActive="active" routerLink="binding">Binding</button><br>
+      <button class="btn btn-primary mb-2 w-100" routerLinkActive="active" routerLink="pipes">Pipes</button><br>
+      <button class="btn btn-primary mb-2 w-100" routerLinkActive="active" routerLink="custom-directive">Custom Directive</button><br>
+      <button class="btn btn-primary mb-2 w-100" routerLinkActive="active" routerLink="lifecycle-hooks">Lifecycle hooks</button><br>
+      <button class="btn btn-primary mb-2 w-100" routerLinkActive="active" routerLink="api-request">API Request</button><br>
+      <button class="btn btn-primary mb-2 w-100" routerLinkActive="active" routerLink="search-table">Search table using Filter</button><br>
+      <button class="btn btn-primary mb-2 w-100" routerLinkActive="active" routerLink="view-child">@view-child</button><br>
+      <button class="btn btn-primary mb-2 w-100" routerLinkActive="active" routerLink="promise-call">Promise call</button><br>
+      <button class="btn btn-primary mb-2 w-100" routerLinkActive="active" routerLink="http-get-request">HTTP Get Request</button><br>
+      <!-- <button class="btn btn-primary mb-2 w-100" routerLinkActive="active" routerLink="dark-light-mode">Dark-light Mode</button><br> -->
+    </div>
+    <div class="col-xl col-sm-12 ">
+      <div class="border p-4">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .btn {
+    text-align: left;
+  }
+</style>

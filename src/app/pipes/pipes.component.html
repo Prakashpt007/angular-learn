@@ -1,0 +1,74 @@
+<div class="container-fluid mt-3">
+  <h5>uppercase pipe</h5>
+  <p>this is prakash patil to <b>{{ 'this is prakash patil' | uppercase }}</b> --------------------------------- (variableName | uppercase)</p>
+  <hr>
+  <!------------------------>
+  <h5>lowercase pipe</h5>
+  <p>THIS IS PRAKASH PATIL to <b>{{ 'THIS IS PRAKASH PATIL' | lowercase }}</b> --------------------------------- (variableName | lowercase)</p>
+  <hr>
+  <!------------------------>
+  <h5>Default Date pipe</h5>
+  <p>Birthday is {{ birthday | date }}--------------------------------- (variableName | date)</p>
+  <hr>
+  <!------------------------>
+  <h5>Date with parameter</h5>
+  <p>Birthday is {{ birthday | date:'dd-MMM,yyyy' }}--------------------------------- (variableName | date:'dd-MMM,yyyy')</p>
+  <hr>
+  <!------------------------>
+  <h5>titlecase pipe</h5>
+  <p>THIS IS PRAKASH PATIL to <b>{{ 'THIS IS PRAKASH PATIL' | titlecase }}</b> --------------------------------- (variableName | titlecase)</p>
+  <hr>
+  <!------------------------>
+  <h5>sentence pipe</h5>
+  <p>THIS IS PRAKASH PATIL to <b>{{ 'THIS IS PRAKASH PATIL' | sentence }}</b> --------------------------------- (variableName | sentence)</p>
+  <hr>
+  <!------------------------>
+  <h5>slice pipe</h5>
+  <p>THIS IS PRAKASH PATIL to <b>{{ 'THIS IS PRAKASH PATIL' | slice:0:15 }}</b> --------------------------------- (variableName | slice:0:15)</p>
+  <hr>
+  <!------------------------>
+  <h5>json pipe</h5>
+  <p><b>
+      <pre>{{ jsonExample | json }}</pre>
+    </b> --------------------------------- (jsonObject | json)</p>
+  <hr>
+  <!------------------------>
+  <h5>currency pipe</h5>
+  <p>25455 to <b>{{ 25455 | currency:'INR' }} </b> --------------------------------- (Number | currency:'INR')</p>
+  <p>25455 to <b>{{ 25455 | currency: 'USD'}} </b> --------------------------------- (Number | currency:'USD')</p>
+  <p>25455 to <b>{{ 25455 | currency:'GBP' }} </b> --------------------------------- (Number | currency:'GBP')</p>
+  <hr>
+  <!------------------------>
+  <h5>number/Decimal pipe</h5>
+  <p>3400 to <b>{{3400 | number: '1.0-2'}} </b> --------------------------------- (Number | number: '1.0-2')</p>
+  <p>3400 to <b>{{3400 | number: '1.2-2'}} </b> --------------------------------- (Number | number: '1.2-2')</p>
+  <p>2322.3400000 to <b>{{2322.3400000 | number: '1.2-3'}} </b> --------------------------------- (Number | number: '1.2-3')</p>
+  <hr>
+  <!------------------------>
+  <h5>Percent pipe</h5>
+  <p>0.75 to <b>{{0.75 | percent}} </b> --------------------------------- (Number in point(0.75) | percent)</p>
+  <hr>
+  <!------------------------>
+  <h5>Chain pipes</h5>
+  <p>Birthday is {{ birthday | date | uppercase }}--------------------------------- (variableName | date | uppercase)</p>
+  <hr>
+  <!------------------------>
+  <hr>
+  <!------------------------>
+  <h5>async pipes</h5>
+  <p>Time: <b>{{ time | async }} </b> ------------------------------- (time | async)</p>
+  <hr>
+  <!------------------------>
+  <h5>Custom Pipe (Temperature Converter)</h5>
+  <input type="text" class="form-control" [(ngModel)]="fahrenhit" placeholder="Please Enter Fahrenhit Value">
+  <p>Celsius: {{fahrenhit | tempConverter:'C'}}</p>
+  <hr>
+  <!------------------------>
+  <input type="text" class="form-control" [(ngModel)]="celcius" placeholder="Please Enter Celcius Value">
+  <p>Fahrenheit: {{celcius | tempConverter:'F'}}</p>
+  <hr>
+  <!------------------------>
+  <h5>Custom Pipe 2 (file size GB to MB)</h5>
+  <input type="text" class="form-control" [(ngModel)]="defineFileSize" placeholder="Please Enter File Size in GB Number">
+  <p>{{defineFileSize | customFileSize: 'MB'}}</p>
+</div>
