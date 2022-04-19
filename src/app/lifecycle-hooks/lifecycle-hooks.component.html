@@ -1,2 +1,8 @@
-<a (click)="changeFromChild()">Change from child</a>
-<br /> {{parentData}}
+<ng-container *ngIf="constructorCall">constructorCall</ng-container><br>
+<ng-container *ngIf="ngOnChangesCall">ngOnChangesCall</ng-container><br>
+<ng-container *ngIf="ngOnInitCall">ngOnInitCall</ng-container><br>
+<ng-container *ngIf="ngDoCheckCall">ngDoCheckCall</ng-container><br>
+<ng-container *ngIf="ngAfterContentCheckedCall">ngAfterContentCheckedCall</ng-container><br>
+<ng-container *ngIf="ngAfterViewInitCall">ngAfterViewInitCall</ng-container><br>
+<ng-container *ngIf="ngAfterViewCheckedCall">ngAfterViewCheckedCall</ng-container><br>
+<ng-container *ngIf="ngOnDestroyCall">ngOnDestroyCall</ng-container>
