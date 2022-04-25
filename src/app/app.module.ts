@@ -29,6 +29,7 @@ import { HttpGetRequestComponent } from './http-get-request/http-get-request.com
 import { HighlightDirective } from './highlight.directive';
 import { CustomDirectiveComponent } from './custom-directive/custom-directive.component';
 import { SentencePipe } from './pipes/sentence.pipe';
+import { ObservableCallComponent } from './observable-call/observable-call.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,6 +54,7 @@ import { SentencePipe } from './pipes/sentence.pipe';
     HighlightDirective,
     CustomDirectiveComponent,
     SentencePipe,
+    ObservableCallComponent,
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ import { FormComponent } from './form/form.component';
 import { ReactiveFormComponent } from './form/reactive-form/reactive-form.component';
 import { HttpGetRequestComponent } from './http-get-request/http-get-request.component';
 import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
+import { ObservableCallComponent } from './observable-call/observable-call.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { PromiseObjectCallComponent } from './promise-object-call/promise-object-call.component';
 import { SearchTableComponent } from './search-table/search-table.component';
@@ -62,6 +63,10 @@ const routes: Routes = [
   {
     path: 'promise-call',
     component: PromiseObjectCallComponent,
+  },
+  {
+    path: 'observable-call',
+    component: ObservableCallComponent,
   },
   {
     path: 'http-get-request',
