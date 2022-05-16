@@ -8,22 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PromiseObjectCallComponent implements OnInit {
   name = 'Angular';
-  apiUrl = 'https://www.techiediaries.com/api/data.json';
+  apiUrl = 'https://jsonplaceholder.typicode.com/users';
 
+  error = false;
+  errorMessage = '';
+  userData: any;
   constructor(private httpClient: HttpClient) {}
 
   ngOnInit() {
-    this.fetchData();
+    // this.fetchData();
   }
-  private fetchData() {
+  fetchData() {
     const promise = this.httpClient.get(this.apiUrl).toPromise();
-    console.warn(promise);
     promise
       .then((data) => {
         console.log('Promise resolved with: ' + JSON.stringify(data));
+        // console.log(data);
+        this.userData = data;
       })
       .catch((error) => {
         console.log('Promise rejected with ' + JSON.stringify(error));
+        console.log(error);
+        if ((error.status = 404)) {
+          this.error = true;
+          this.errorMessage = 'Data Link Not found';
+        }
       });
   }
 }

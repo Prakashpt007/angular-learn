@@ -17,6 +17,8 @@ export class PipesComponent implements OnInit {
     console.log('constructor call');
   }
 
+  sl = ['ram', 'sham', 'john', 'kam'];
+
   ngOnInit(): void {
     console.log('ngOnInit call');
   }

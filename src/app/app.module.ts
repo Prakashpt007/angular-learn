@@ -30,6 +30,7 @@ import { HighlightDirective } from './highlight.directive';
 import { CustomDirectiveComponent } from './custom-directive/custom-directive.component';
 import { SentencePipe } from './pipes/sentence.pipe';
 import { ObservableCallComponent } from './observable-call/observable-call.component';
+import { TemplateDrivenFromComponent } from './form/template-driven-from/template-driven-from.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +56,7 @@ import { ObservableCallComponent } from './observable-call/observable-call.compo
     CustomDirectiveComponent,
     SentencePipe,
     ObservableCallComponent,
+    TemplateDrivenFromComponent,
   ],
   imports: [
     BrowserModule,

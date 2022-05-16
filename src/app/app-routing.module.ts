@@ -7,6 +7,7 @@ import { DarkLightModeComponent } from './dark-light-mode/dark-light-mode.compon
 import { ParentStudentComponent } from './data-sharing/parent-student/parent-student.component';
 import { FormComponent } from './form/form.component';
 import { ReactiveFormComponent } from './form/reactive-form/reactive-form.component';
+import { TemplateDrivenFromComponent } from './form/template-driven-from/template-driven-from.component';
 import { HttpGetRequestComponent } from './http-get-request/http-get-request.component';
 import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
 import { ObservableCallComponent } from './observable-call/observable-call.component';
@@ -29,6 +30,13 @@ const routes: Routes = [
   {
     path: 'forms',
     component: FormComponent,
+    children: [
+      {
+        path: 'template-driven-form',
+        component: TemplateDrivenFromComponent,
+        // outlet: 'addr',
+      },
+    ],
   },
   {
     path: 'binding',

@@ -1,1 +1,49 @@
 <p>promise-object-call works!</p>
+<button (click)="fetchData()">Get Data</button>
+<div *ngIf="error"> {{errorMessage}} </div>
+<div class="row">
+  <ng-container *ngFor="let user of userData">
+    <div class="mt-3 col-3 newsContainer">
+      <div class="card">
+        <h5 class="card-header newsTitle">{{user.name}}</h5>
+        <div class="card-body">
+          <!-- <p class="desc">{{user.username}}</p>
+        <p class="desc">{{user.username}}</p>
+        <span class="badge bg-secondary">{{user.name}}</span> -->
+          <ul>
+            <li><b>Name : </b> {{user.username}}</li>
+            <li><b>Email : </b>{{user.email}}</li>
+            <li><b>Phone : </b>{{user.phone}}</li>
+            <li><b>Website : </b>{{user.website}}</li>
+            <li><b>Company : </b>{{user.company.name}} - {{user.company.catchPhrase}} - {{user.company.bs}}</li>
+            <li><b>Address : </b>{{user.address.street}} - {{user.address.suite}} - {{user.address.city}} - {{user.address.zipcode}} - {{user.address.geo.lat}}- {{user.address.geo.lng}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+<!--
+{
+	"id": 1,
+	"name": "Leanne Graham",
+	"username": "Bret",
+	"email": "Sincere@april.biz",
+	"address": {
+		"street": "Kulas Light",
+		"suite": "Apt. 556",
+		"city": "Gwenborough",
+		"zipcode": "92998-3874",
+		"geo": {
+			"lat": "-37.3159",
+			"lng": "81.1496"
+		}
+	},
+	"phone": "1-770-736-8031 x56442",
+	"website": "hildegard.org",
+	"company": {
+		"name": "Romaguera-Crona",
+		"catchPhrase": "Multi-layered client-server neural-net",
+		"bs": "harness real-time e-markets"
+	}
+} -->
